@@ -3,8 +3,6 @@ using UnityEngine;
 public class Boundary : MonoBehaviour
 {
     private Camera mainCamera;
-    private Vector3 screenBoundsMin;
-    private Vector3 screenBoundsMax;
 
     private void Start()
     {

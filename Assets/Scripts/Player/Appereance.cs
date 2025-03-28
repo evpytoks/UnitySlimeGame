@@ -24,9 +24,12 @@ public class Appereance : MonoBehaviour
     private void ChooseDirection() {
         Vector2 lastMove = Player.Instance.GetLastMoveDirection();
 
-        if (lastMove.x < 0) {
+        if (lastMove.x < 0) 
+        {
             spriteRenderer.flipX = true;
-        } else if (lastMove.x > 0) {
+        } 
+        else if (lastMove.x > 0) 
+        {
             spriteRenderer.flipX = false;
         }
     }

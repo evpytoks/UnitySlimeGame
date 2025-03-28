@@ -13,7 +13,8 @@ public class Player : MonoBehaviour
     private bool isWalking = false;
     private Vector2 lastMoveDirection = Vector2.right;
 
-    private void Awake() {
+    private void Awake() 
+    {
         Instance = this;
         rb = GetComponent<Rigidbody2D>();
     }

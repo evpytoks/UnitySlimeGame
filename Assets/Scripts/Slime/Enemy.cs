@@ -18,7 +18,8 @@ public class Enemy : MonoBehaviour
     private Vector3 goalPoint;
 
 
-    private enum State {
+    private enum State 
+    {
         Idle, 
         Walking
     }
@@ -34,13 +35,15 @@ public class Enemy : MonoBehaviour
 
     private void Update()
     {
-        switch (state) {
+        switch (state) 
+        {
             default:
             case State.Idle:
                 break;
             case State.Walking:
                 walkingTimeLeft -= Time.deltaTime;
-                if (walkingTimeLeft < 0) {
+                if (walkingTimeLeft < 0) 
+                {
                     Walking();
                     walkingTimeLeft = walkingIterationTime;
                 }
@@ -58,9 +61,11 @@ public class Enemy : MonoBehaviour
 
     private void Turn(Vector3 position, Vector3 goalPoint) 
     {
-        if (position.x > goalPoint.x) {
+        if (position.x > goalPoint.x) 
+        {
             transform.rotation = Quaternion.Euler(0, -180, 0);
-        } else {
+        } else 
+        {
             transform.rotation = Quaternion.Euler(0, 0, 0);
         }
     }
