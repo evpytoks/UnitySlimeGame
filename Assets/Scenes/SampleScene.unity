@@ -258,8 +258,9 @@ GameObject:
   m_Component:
   - component: {fileID: 128343246}
   - component: {fileID: 128343245}
-  - component: {fileID: 128343247}
   - component: {fileID: 128343248}
+  - component: {fileID: 128343249}
+  - component: {fileID: 128343250}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -295,22 +296,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &128343247
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 128343244}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f949a5e5a5ec243f39fa3e2fd7257ecc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  slimePrefab: {fileID: 2069752819638917885, guid: b14df6532ea554d96845fd958cdb3701, type: 3}
-  spawnInterval: 2
-  spawnAreaMin: {x: 0, y: 0}
-  spawnAreaMax: {x: 1720, y: 915}
 --- !u!114 &128343248
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -325,7 +310,39 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeText: {fileID: 1890200144}
   gameOverPanel: {fileID: 357913273}
-  gameDuration: 10
+  gameDuration: 60
+--- !u!114 &128343249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 128343244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21bd83df9e2f84398a1f28db39ca121a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectPrefab: {fileID: 2069752819638917885, guid: b14df6532ea554d96845fd958cdb3701, type: 3}
+  spawnInterval: 2
+  spawnAreaMin: {x: 0, y: 0}
+  spawnAreaMax: {x: 1720, y: 915}
+--- !u!114 &128343250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 128343244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21bd83df9e2f84398a1f28db39ca121a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectPrefab: {fileID: 9184943794334340206, guid: 5667cfe12b7a44594a9b6227e71fad64, type: 3}
+  spawnInterval: 15
+  spawnAreaMin: {x: 0, y: 0}
+  spawnAreaMax: {x: 1720, y: 915}
 --- !u!1 &223601898
 GameObject:
   m_ObjectHideFlags: 0
@@ -358,7 +375,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b5c79a5fdbc34363846d8012534b6e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movingSpeed: 400
+  movingSpeed: 300
 --- !u!4 &223601901
 Transform:
   m_ObjectHideFlags: 0

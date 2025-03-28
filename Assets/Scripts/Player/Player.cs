@@ -23,23 +23,34 @@ public class Player : MonoBehaviour
         HandleMovement();
     }
 
-    private void HandleMovement() {
+    private void HandleMovement() 
+    {
         Vector2 inputVector = Input.Instance.GetMovementVector();
         rb.MovePosition(rb.position + inputVector * (movingSpeed * Time.fixedDeltaTime));
 
-        if (inputVector.magnitude > MIN_MOVING_SPEED) {
+        if (inputVector.magnitude > MIN_MOVING_SPEED) 
+        {
             isWalking = true;
             lastMoveDirection = inputVector.normalized;
-        } else {
+        } 
+        else 
+        {
             isWalking = false;
         }
     }
 
-    public bool IsWalking() {
+    public bool IsWalking() 
+    {
         return isWalking;
     }
 
-    public Vector2 GetLastMoveDirection() {
+    public Vector2 GetLastMoveDirection() 
+    {
         return lastMoveDirection;
+    }
+
+    public void ChangeSpeed(float speedChenge)
+    {
+        movingSpeed *= speedChenge;
     }
 }
